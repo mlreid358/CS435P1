@@ -3,6 +3,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+	
+
 public class task {
 	private static String line = "";
 	private static boolean DEBUG = true;
@@ -11,6 +13,12 @@ public class task {
 			DEBUG = true;
 		}
 		try {
+			File folder = new File("/home/michael/workspace/workspace/CS_435_P1/sampleData");
+			String[] files = folder.list();
+			System.out.println("files: ");
+			for(int i = 0; i<files.length; i++){
+				System.out.println("#"+i+" "+files[i]);
+			}
 			Scanner scanny = new Scanner(new File("sample2.txt"));
 			String peek = "";
 			String author = "";
